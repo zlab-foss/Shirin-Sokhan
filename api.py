@@ -8,8 +8,8 @@ from scipy.io.wavfile import read, write
 from src.model import PoetFormer
 
 name = 'GPT2-fa-ganjoor-conditional'
-model = PoetFormer(pretrained_name="HooshvareLab/gpt2-fa")
-# model = PoetFormer.load_from_checkpoint(f'weights/{name}/last.ckpt', pretrained="HooshvareLab/gpt2-fa")
+#model = PoetFormer(pretrained_name="HooshvareLab/gpt2-fa-poetry")
+model = PoetFormer.load_from_checkpoint(f'weights/{name}/last.ckpt', pretrained_name="HooshvareLab/gpt2-fa")
 model.eval()
 
 
